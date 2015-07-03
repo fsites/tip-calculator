@@ -24,33 +24,37 @@
 				Tip Percentage: %<input type="number" name="tip" id="percent-box"><br>
 
 				<div id="input-buttons">
-					<input class="meal-button" type="submit" value="Submit">
-					<input class="meal-button" type="reset" value="Cancel">
+					<input class="button" type="submit" value="Submit">
+					<input class="button" type="reset" value="Cancel">
 				</div>
 
 			</form>
 		</div>
 
 		<!-- Charges and Info Sections -->
-		<div id="charges-earnings">
-			<div class="content-box" id="charges">
-				<h3>Customer Charges</h3>
-				<p id="output">Subtotal: <br>
-					Tip: <br>
-					______________<br>
-					Total: 
-				</p>
+		<div id="right">
+			<div id="charges-earnings">
+				<div class="content-box" id="charges">
+					<h3>Customer Charges</h3>
+					<p id="output">Subtotal: <br>
+						Tip: <br>
+						______________<br>
+						Total: 
+					</p>
+				</div>
+				<div class="content-box" id="earnings">
+					<h3>My Earnings Info</h3>
+					<p id="output">Tip Total: <br>
+						Meal Count: <br>
+						Average Tip Per Meal: 
+					</p>
+				</div>
 			</div>
-			<div class="content-box" id="earnings">
-				<h3>My Earnings Info</h3>
-			</div>
-
-
+			<button id="reset" class="button" value"reset">Reset</button>
 
 		</div>
-	</div>
 
-	
+	</div>
 </body>
 </html>
 

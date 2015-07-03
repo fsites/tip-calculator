@@ -6,17 +6,26 @@ h1 {
 	font-weight: 100;
 	text-align: center;
 }
-/*Main Content General Styling*/
+/*Main Content and General Styling*/
+
+
 
 #main-content {
-	width: 800px;
+	width: 760px;
 	margin: 0 auto;
 }
 .content-box {
 	border: 2px black solid;
 	border-radius: 3px;
 	margin: 10px 5px;
+}
 
+.button {
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 20px;
+	width: 60px;
+	background-color: white;
 }
 
 h3 {
@@ -27,15 +36,18 @@ h3 {
 
 /*Meal Details Box*/
 
-#user-input {
-	text-align: right;
-	width: 300px;
-	margin-top: 10px;
-}
-
 #details {
 	width: 400px;
+	height: 253px;
+	float: left;
 }
+
+#user-input {
+	width: 300px;
+	margin: 10px auto;
+	text-align: center;
+}
+
 #meal-price {
 	width: 80px;
 }
@@ -47,11 +59,17 @@ h3 {
 #input-buttons {
 	height: 40px;
 	width: 60%;
-	margin: 10px auto;
+	margin: 55px auto;
 }
 
 /*Charges and Earnings*/
+#right {
+	float: right;
+}
 
+#charges-earnings {
+	height: 280px;
+}
 #charges, #earnings {
 	width: 330px;
 }
@@ -65,6 +83,12 @@ h3 {
 	width: 70px;
 	border-top: 1px solid black;
 }
+
+#reset {
+	float: right;
+}
+
+/*Reset*/
 
 
 
