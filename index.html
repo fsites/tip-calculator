@@ -7,9 +7,41 @@
 	<script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.8/angular-messages.js"></script>
 	<script type="text/javascript" src="app.js"></script>
-
 </head>
 <body>
+	<!-- HEADER -->
+	<h1>WaitStaff Calculator</h1>
+
+	<!-- Main Content -->
+	<div id="main-content">
+
+		<!-- Meal Details -->
+		<div class="content-box" id="details">
+			<h3>Enter the Meal Details</h3>
+			<form id="user-input">
+				Base Meal Price: $<input type="number" name="meal-price" id="meal-price"><br>
+				Tax Rate: %<input type="number" name="tax-rate" id="percent-box"><br>
+				Tip Percentage: %<input type="number" name="tip" id="percent-box"><br>
+
+				<div id="input-buttons">
+					<input class="meal-button" type="submit" value="Submit">
+					<input class="meal-button" type="reset" value="Cancel">
+				</div>
+
+			</form>
+		</div>
+
+		<!-- Charges and Info Sections -->
+		<div class="content-box" id="charges-earnings">
+			<div id="charges">
+				<h3>Customer Charges</h3>
+			</div>
+
+
+
+		</div>
+	</div>
+
 	
 </body>
 </html>

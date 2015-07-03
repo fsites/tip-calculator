@@ -1,3 +1,45 @@
-body {
-	margin: 0;
+html {
+	font-family: "comic sans ms";
 }
+
+h1 {
+	font-weight: 100;
+	text-align: center;
+}
+/*Main Content General Styling*/
+
+.content-box {
+	border: 2px black solid;
+}
+
+h3 {
+	border-bottom: 1.5px black solid;
+	padding: 0 10px;
+	margin: 3px;
+}
+
+/*Meal Details Box*/
+
+#user-input {
+	text-align: right;
+	width: 300px;
+	margin-top: 10px;
+}
+
+#details {
+	width: 400px;
+}
+#meal-price {
+	width: 80px;
+}
+
+#percent-box {
+	width: 40px;
+}
+
+#input-buttons {
+	height: 40px;
+	width: 60%;
+	margin: 10px auto;
+}
+
