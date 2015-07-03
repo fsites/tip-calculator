@@ -8,8 +8,15 @@ h1 {
 }
 /*Main Content General Styling*/
 
+#main-content {
+	width: 800px;
+	margin: 0 auto;
+}
 .content-box {
 	border: 2px black solid;
+	border-radius: 3px;
+	margin: 10px 5px;
+
 }
 
 h3 {
@@ -42,4 +49,52 @@ h3 {
 	width: 60%;
 	margin: 10px auto;
 }
+
+/*Charges and Earnings*/
+
+#charges, #earnings {
+	width: 330px;
+}
+
+#output {
+	width: 300px;
+	margin: 0 auto 6px auto;
+}
+
+#divider {
+	width: 70px;
+	border-top: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
