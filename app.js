@@ -8,22 +8,22 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 		$scope.tip = "";
 	}
 
-	$scope.inititalCharges = function() {
+	$scope.initialCharges = function() {
 		$scope.subTotal = 0;
 		$scope.tip = 0;
 		$scope.total = 0;
 	}
 
-	$scope.initalEarnings = function() {
+	$scope.initialEarnings = function() {
 		$scope.mealCount = 0;
 		$scope.tipTotal = 0;
 		$scope.averageTip = 0;
 	}
 
-	$scope.initalState = function (){
+	$scope.initialState = function (){
 		$scope.clearform();
-		$scope.initalCharges();
-		$scope.initalEarnings();
+		$scope.initialCharges();
+		$scope.initialEarnings();
 	}
 
 	$scope.onSubmit = function() {
@@ -31,7 +31,7 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 		$scope.tipTotal += $scope.tip;
 	}
 
-	$scope.initalState();
+	$scope.initialState();
 
 }]);
 

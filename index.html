@@ -4,8 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Tip Calculator</title>
 	<link rel="stylesheet" href="style.css">
-	<script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.8/angular-messages.js"></script>
+	<script type="text/javascript" src="angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
 <body ng-controller="MyCtrl">
@@ -35,15 +34,15 @@
 			<div id="charges-earnings">
 				<div class="content-box" id="charges">
 					<h3>Customer Charges</h3>
-					<div><label>Subtotal: </label><span>{{subTotal}}</span></div>
-					<div><label>Tip: </label><span>{{tip}}</span></div>
-					<div><label>Total: </label><span>{{total}}</span></div>
+					<div><label>Subtotal: $</label><span>{{subTotal}}</span></div>
+					<div><label>Tip: $</label><span>{{tip}}</span></div>
+					<div><label>Total: $</label><span>{{total}}</span></div>
 				</div>
 				<div class="content-box" id="earnings">
 					<h3>My Earnings Info</h3>
-					<div><label>Tip Total: </label><span>{{tipTotal}}</span></div>
-					<div><label>Meal Count: </label><span>{{mealCount}}</span></div>
-					<div><label>Average Tip Per Meal: </label><span>{{averageTip}}</span></div>
+					<div><label>Tip Total: $</label><span>{{tipTotal}}</span></div>
+					<div><label>Meal Count: $</label><span>{{mealCount}}</span></div>
+					<div><label>Average Tip Per Meal: $</label><span>{{averageTip}}</span></div>
 				</div>
 			</div>
 			<button id="reset" class="button" value"reset" ng-click="initialState()">Reset</button>
@@ -53,32 +52,4 @@
 	</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
