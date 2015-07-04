@@ -9,7 +9,7 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 	}
 
 	$scope.inititalCharges = function() {
-		$scope.subtotal = 0;
+		$scope.subTotal = 0;
 		$scope.tip = 0;
 		$scope.total = 0;
 	}
@@ -25,7 +25,14 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 		$scope.initalCharges();
 		$scope.initalEarnings();
 	}
-	
+
+	$scope.onSubmit = function() {
+		$scope.mealCount++;
+		$scope.tipTotal += $scope.tip;
+	}
+
+	$scope.initalState();
+
 }]);
 
 
