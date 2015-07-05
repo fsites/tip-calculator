@@ -19,8 +19,8 @@
 			<h3>Enter the Meal Details</h3>
 			<form id="user-input" name="userform" ng-submit="onSubmit()">
 				<div><label for="mealPrice"></label>Base Meal Price: $<input type="number" name="mealPrice" id="meal-price" ng-model="mealPrice" required step=".01"/></div>
-				<div><label for="tax">Tax Rate: %</label><input type="number" name="tax" id="percent-box" ng-model="tax" required step=".1"/></div>
-				<div><label for="tip">Tip Percentage: %</label><input type="number" name="tip" id="percent-box" ng-model="tip" required/><div>
+				<div><label for="tax">Tax Rate: %</label><input type="number" name="tax" id="percent-box" ng-model="taxPercent" required step=".1"/></div>
+				<div><label for="tip">Tip Percentage: %</label><input type="number" name="tip" id="percent-box" ng-model="tipPercent" required/><div>
 
 				<div id="input-buttons">
 					<input class="button" type="submit" value="Submit" required/>
@@ -34,9 +34,9 @@
 			<div id="charges-earnings">
 				<div class="content-box" id="charges">
 					<h3>Customer Charges</h3>
-					<div><label>Subtotal: $</label><span>{{subTotal}}</span></div>
-					<div><label>Tip: $</label><span>{{tip}}</span></div>
-					<div><label>Total: $</label><span>{{total}}</span></div>
+					<div><label>Subtotal: $</label><span>{{subTotal || 0}}</span></div>
+					<div><label>Tip: $</label><span>{{tip || 0}}</span></div>
+					<div><label>Total: $</label><span>{{total || 0}}</span></div>
 				</div>
 				<div class="content-box" id="earnings">
 					<h3>My Earnings Info</h3>

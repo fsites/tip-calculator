@@ -3,9 +3,9 @@ var app = angular.module('waitstaff', [])
 app.controller('MyCtrl', ['$scope', function($scope) {
 
 	$scope.clearform = function() {
-		$scope.mealPrice = "";
-		$scope.tax = "";
-		$scope.tip = "";
+		$scope.mealPrice = 0;
+		$scope.taxPercent = 0;
+		$scope.tipPercent = 0;
 	}
 
 	$scope.initialCharges = function() {
@@ -32,6 +32,12 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 	}
 
 	$scope.initialState();
+
+	$scope.$watchGroup(['mealPrice', 'taxPercent', 'tipPercent'], function(newValues, oldValues, scope) {
+		$scope.subTotal = $scope.mealPrice + (($scope.taxPercent / 100) * $scope.mealPrice);
+		$scope.tip = $scope.mealPrice / 100 * $scope.tipPercent;
+		$scope.total = $scope.subTotal + $scope.tip;
+	})
 
 }]);
 
