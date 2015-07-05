@@ -46,7 +46,7 @@ h3 {
 /*Meal Details Box*/
 #details {
 	width: 380px;
-	height: 253px;
+	height: 220px;
 	float: left;
 }
 
@@ -67,7 +67,7 @@ h3 {
 #input-buttons {
 	height: 40px;
 	width: 60%;
-	margin: 55px auto;
+	margin: 35px auto;
 }
 
 /*Charges and Earnings*/
@@ -113,6 +113,11 @@ h3 {
 		width: 320px;
 		margin: 0;
 	}
+
+	h1 {
+		font-size: 1.4em;
+	}
+
 }
 
 
