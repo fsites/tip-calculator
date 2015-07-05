@@ -3,9 +3,9 @@ var app = angular.module('waitstaff', [])
 app.controller('MyCtrl', ['$scope', function($scope) {
 
 	$scope.clearform = function() {
-		$scope.mealPrice = 0;
-		$scope.taxPercent = 0;
-		$scope.tipPercent = 0;
+		$scope.mealPrice = "";
+		$scope.taxPercent = 9.5;
+		$scope.tipPercent = "";
 	}
 
 	$scope.initialCharges = function() {
@@ -29,6 +29,8 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 	$scope.onSubmit = function() {
 		$scope.mealCount++;
 		$scope.tipTotal += $scope.tip;
+		$scope.averageTip = $scope.tipTotal / $scope.mealCount;
+		$scope.clearform();
 	}
 
 	$scope.initialState();
