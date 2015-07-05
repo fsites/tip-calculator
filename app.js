@@ -4,7 +4,7 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 
 	$scope.clearform = function() {
 		$scope.mealPrice = "";
-		$scope.taxPercent = 9.5;
+		$scope.taxPercent = 9.5; //Local tax rate
 		$scope.tipPercent = "";
 	}
 
@@ -33,7 +33,7 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 		$scope.clearform();
 	}
 
-	$scope.initialState();
+	$scope.initialState(); //loads initial state on page load
 
 	$scope.$watchGroup(['mealPrice', 'taxPercent', 'tipPercent'], function(newValues, oldValues, scope) {
 		$scope.subTotal = $scope.mealPrice + (($scope.taxPercent / 100) * $scope.mealPrice);

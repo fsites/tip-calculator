@@ -7,9 +7,10 @@ h1 {
 	text-align: center;
 }
 
+
 /*Main Content and General Styling*/
 #main-content {
-	width: 900px;
+	width: 750px;
 	margin: 0 auto;
 }
 .content-box {
@@ -31,15 +32,20 @@ h1 {
 	border: 2px solid black;
 }
 
+.button:focus {
+	outline: none;
+} 
+
 h3 {
 	border-bottom: 1.5px black solid;
 	padding: 0 10px;
 	margin: 3px;
 }
 
+
 /*Meal Details Box*/
 #details {
-	width: 400px;
+	width: 380px;
 	height: 253px;
 	float: left;
 }
@@ -65,22 +71,16 @@ h3 {
 }
 
 /*Charges and Earnings*/
-#right {
-	float: right;
-}
 
 #charges-earnings {
-	height: 280px;
-	width: 350px;
+	height: 300px;
+	width: 330px;
 	float: right;
 }
 #charges, #earnings {
 	width: 330px;
-}
+	text-align: center;
 
-#output {
-	width: 300px;
-	margin: 0 auto 6px auto;
 }
 
 #divider {
@@ -88,9 +88,31 @@ h3 {
 	border-top: 1px solid black;
 }
 
-/*Reset*/
-/*#reset {
+#reset {
 	float: right;
-}*/
+}
+
+#reset:hover {
+	background-color: red;
+	color: white;
+}
+
+@media (max-width: 700px) {
+
+	#main-content {
+		width: 320px;
+		margin: 0 auto;
+	}
+	#charges-earnings, #details {
+		float: none;
+		width: 320px;
+		margin: 0;
+	}
+
+	#charges, #earnings {
+		width: 320px;
+		margin: 0;
+	}
+}
 
 
