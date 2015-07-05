@@ -6,12 +6,10 @@ h1 {
 	font-weight: 100;
 	text-align: center;
 }
+
 /*Main Content and General Styling*/
-
-
-
 #main-content {
-	width: 720px;
+	width: 900px;
 	margin: 0 auto;
 }
 .content-box {
@@ -28,6 +26,11 @@ h1 {
 	background-color: white;
 }
 
+.button:hover {
+	cursor: pointer;
+	border: 2px solid black;
+}
+
 h3 {
 	border-bottom: 1.5px black solid;
 	padding: 0 10px;
@@ -35,11 +38,11 @@ h3 {
 }
 
 /*Meal Details Box*/
-
 #details {
 	width: 400px;
 	height: 253px;
 	float: left;
+	border: 2px solid red;
 }
 
 #user-input {
@@ -65,10 +68,14 @@ h3 {
 /*Charges and Earnings*/
 #right {
 	float: right;
+	width: 100%;
+	border: 2px solid red;
 }
 
 #charges-earnings {
 	height: 280px;
+	width: 350px;
+	float: right;
 }
 #charges, #earnings {
 	width: 330px;
@@ -84,41 +91,9 @@ h3 {
 	border-top: 1px solid black;
 }
 
-#reset {
-	float: right;
-}
-
 /*Reset*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*#reset {
+	float: right;
+}*/
 
 

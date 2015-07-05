@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="waitstaff">
 <head>
 	<meta charset="UTF-8">
 	<title>Tip Calculator</title>
@@ -40,13 +40,14 @@
 				</div>
 				<div class="content-box" id="earnings">
 					<h3>My Earnings Info</h3>
-					<div><label>Tip Total: $</label><span>{{tipTotal}}</span></div>
-					<div><label>Meal Count: $</label><span>{{mealCount}}</span></div>
-					<div><label>Average Tip Per Meal: $</label><span>{{averageTip}}</span></div>
+					<div id="output">
+						<div><label>Tip Total: $</label><span>{{tipTotal}}</span></div>
+						<div><label>Meal Count: $</label><span>{{mealCount}}</span></div>
+						<div><label>Average Tip Per Meal: $</label><span>{{averageTip}}</span></div>
+					</div>
 				</div>
 			</div>
 			<button id="reset" class="button" value"reset" ng-click="initialState()">Reset</button>
-
 		</div>
 
 	</div>

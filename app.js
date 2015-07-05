@@ -2,7 +2,7 @@ var app = angular.module('waitstaff', [])
 
 app.controller('MyCtrl', ['$scope', function($scope) {
 
-	$scope.clearform = function(){
+	$scope.clearform = function() {
 		$scope.mealPrice = "";
 		$scope.tax = "";
 		$scope.tip = "";
@@ -20,7 +20,7 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 		$scope.averageTip = 0;
 	}
 
-	$scope.initialState = function (){
+	$scope.initialState = function () {
 		$scope.clearform();
 		$scope.initialCharges();
 		$scope.initialEarnings();
