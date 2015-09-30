@@ -1,4 +1,4 @@
-var app = angular.module('waitstaff', [])
+var app = angular.module('waitstaff', ['ngRoute'])
 
 app.controller('MyCtrl', ['$scope', function($scope) {
 

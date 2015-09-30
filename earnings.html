@@ -1,0 +1,15 @@
+<!-- Charges and Info Sections -->
+<div id="charges-earnings">
+
+<div class="content-box" id="earnings">
+	<h3>My Earnings Info</h3>
+	<div>
+		<div><label>Tip Total: $</label><span>{{tipTotal | number: 2}}</span></div>
+		<div><label>Meal Count: </label><span>{{mealCount}}</span></div>
+		<div><label>Average Tip Per Meal: $</label><span>{{averageTip | number: 2}}</span></div>
+	</div>
+</div>
+
+<button id="reset" class="button" value"reset" ng-click="initialState()">Reset</button>
+
+</div>
