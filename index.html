@@ -6,9 +6,10 @@
 	<title>Tip Calculator</title>
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="angular-route.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
-<body ng-controller="MyCtrl">
+<body>
 	<!-- HEADER -->
 	<h1>WaitStaff Calculator</h1>
 
@@ -21,8 +22,7 @@
 		<li><a href="#/earnings">My Earnings</a></li>
 	</ul>
 
-	<p id="directions">To begin, select "new meal" and enter the price, tax rate, and tip percentage. Let the calculator do the work to find your tip total, meal count, and average tip per meal.</p>
-
+	<div ng-view></div>
 
 </body>
 </html>
