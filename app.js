@@ -1,4 +1,5 @@
-var app = angular.module('waitstaff', ['ngRoute'])
+angular.module('waitstaff', ['ngRoute'])
+
 	.config(function($routeProvider) {
 		$routeProvider.when('/', {
 			templateUrl : 'home.html',
@@ -12,10 +13,7 @@ var app = angular.module('waitstaff', ['ngRoute'])
 			templateUrl : 'earnings.html'
 			controller : 'EarningsCtrl'
 		})
-		.when('/error', {
-			template : '<p>Error - Page not found</p>'
-		})
-		.otherwise('/error');
+		.otherwise('/');
 	})
 	.controller('HomeCtrl', ['$scope', function($scope) {
 		//empty
