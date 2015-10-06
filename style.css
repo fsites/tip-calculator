@@ -16,7 +16,7 @@ h1 {
 .content-box {
 	border: 2px black solid;
 	border-radius: 3px;
-	margin: 10px 5px;
+	margin: 20px auto;
 }
 
 .button {
@@ -57,7 +57,7 @@ a:hover {
 #nav {
 	list-style-type: none;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 15px auto;
 	padding: 0;
 	text-align: center;
 }
@@ -76,12 +76,11 @@ a:hover {
 #details {
 	width: 380px;
 	height: 220px;
-	float: left;
 }
 
 #user-input {
-	width: 300px;
-	margin: 10px auto;
+	width: 330px;
+	margin: 20px auto;
 	text-align: center;
 }
 
@@ -104,12 +103,12 @@ a:hover {
 #charges-earnings {
 	height: 300px;
 	width: 330px;
-	float: right;
+	margin: 0 auto;
 }
 #charges, #earnings {
 	width: 330px;
+	margin-top: 10px;
 	text-align: center;
-
 }
 
 #divider {
@@ -119,6 +118,7 @@ a:hover {
 
 #reset {
 	float: right;
+	margin-top: 10px;
 }
 
 #reset:hover {
@@ -135,7 +135,7 @@ a:hover {
 	#charges-earnings, #details {
 		float: none;
 		width: 320px;
-		margin: 0;
+		margin: 0 auto;
 	}
 
 	#charges, #earnings {
