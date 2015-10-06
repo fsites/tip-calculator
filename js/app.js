@@ -1,4 +1,26 @@
 angular.module('waitstaff', ['ngRoute'])
+	
+	.service('dataService', function () {
+		var dataResponse = {
+			mealCount: 0,
+			tipTotal: 0,
+			averageTip: 0,
+			mealPrice: 0,
+			taxPercent: 0,
+			tipPercent: 0,
+			total: 0,
+			subTotal: 0
+		}
+
+		return {
+			saveDataResponse:function(data) {
+				dataResponse = data;
+			},
+			getDataResponse:function() {
+				return dataResponse;
+			}
+		};
+	})
 
 	.config(function($routeProvider) {
 		$routeProvider.when('/', {
@@ -11,31 +33,32 @@ angular.module('waitstaff', ['ngRoute'])
 		})
 		.when('/earnings', {
 			templateUrl : 'earnings.html',
-			controller : 'InputCtrl'
+			controller : 'EarningsCtrl'
 		})
 		.otherwise('/');
 	})
 	.controller('HomeCtrl', ['$scope', function($scope) {
 		//empty
 	}])
-	.controller('InputCtrl', ['$scope', function($scope) {
+	.controller('InputCtrl', ['$scope', 'dataService', function($scope, dataService) {
+		$scope.Data = dataService.getDataResponse();
 
 		$scope.clearform = function() {
-			$scope.mealPrice = "";
-			$scope.taxPercent = 9.5; //Local tax rate
-			$scope.tipPercent = "";
+			$scope.Data.mealPrice = "";
+			$scope.Data.taxPercent = 9.5; //Local tax rate
+			$scope.Data.tipPercent = "";
 		};
 
 		$scope.initialCharges = function() {
-			$scope.subTotal = 0;
-			$scope.tip = 0;
-			$scope.total = 0;
+			$scope.Data.subTotal = 0;
+			$scope.Data.tip = 0;
+			$scope.Data.total = 0;
 		};
 
 		$scope.initialEarnings = function() {
-			$scope.mealCount = 0;
-			$scope.tipTotal = 0;
-			$scope.averageTip = 0;
+			$scope.Data.mealCount = 0;
+			$scope.Data.tipTotal = 0;
+			$scope.Data.averageTip = 0;
 		};
 
 		$scope.initialState = function () {
@@ -45,23 +68,24 @@ angular.module('waitstaff', ['ngRoute'])
 		};
 
 		$scope.onSubmit = function() {
-			$scope.mealCount++;
-			$scope.tipTotal += $scope.tip;
-			$scope.averageTip = $scope.tipTotal / $scope.mealCount;
+			$scope.Data.mealCount++;
+			$scope.Data.tipTotal += $scope.Data.tip;
+			$scope.Data.averageTip = $scope.Data.tipTotal / $scope.Data.mealCount;
+			dataService.saveDataResponse($scope.Data);
 			$scope.clearform();
 		};
 
 		$scope.initialState(); //loads initial state on page load
 
 		$scope.$watchGroup(['mealPrice', 'taxPercent', 'tipPercent'], function(newValues, oldValues, $scope) {
-			$scope.subTotal = $scope.mealPrice + (($scope.taxPercent / 100) * $scope.mealPrice);
-			$scope.tip = $scope.mealPrice / 100 * $scope.tipPercent;
-			$scope.total = $scope.subTotal + $scope.tip;
+			$scope.Data.subTotal = $scope.Data.mealPrice + (($scope.Data.taxPercent / 100) * $scope.Data.mealPrice);
+			$scope.Data.tip = $scope.Data.mealPrice / 100 * $scope.Data.tipPercent;
+			$scope.Data.total = $scope.Data.subTotal + $scope.Data.tip;
 		});
 
 	}])
-	.controller('EarningsCtrl', ['$scope', function($scope) {
-
+	.controller('EarningsCtrl', ['$scope', 'dataService', function($scope, dataService) {
+		$scope.Data = dataService.getDataResponse();
 	}]);
 
 
