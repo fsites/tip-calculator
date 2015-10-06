@@ -51,14 +51,16 @@ angular.module('waitstaff', ['ngRoute'])
 			$scope.clearform();
 		};
 
-		$scope.initialState(); //loads initial state on page load
-	}])
-	.controller('EarningsCtrl', ['$scope', function($scope) {
 		$scope.$watchGroup(['mealPrice', 'taxPercent', 'tipPercent'], function(newValues, oldValues, $scope) {
 			$scope.subTotal = $scope.mealPrice + (($scope.taxPercent / 100) * $scope.mealPrice);
 			$scope.tip = $scope.mealPrice / 100 * $scope.tipPercent;
 			$scope.total = $scope.subTotal + $scope.tip;
 		});
+		
+		$scope.initialState(); //loads initial state on page load
+	}])
+	.controller('EarningsCtrl', ['$scope', function($scope) {
+		
 	}]);
 
 

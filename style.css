@@ -68,7 +68,8 @@ a:hover {
 }
 
 #directions {
-	width: 60%;
+	width: 95%;
+	max-width: 550px;
 	margin: 20px auto;
 }
 
@@ -145,6 +146,11 @@ a:hover {
 
 	h1 {
 		font-size: 1.4em;
+	}
+
+	p {
+		min-width: 320px;
+		margin: 10px;
 	}
 
 }
