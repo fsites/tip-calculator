@@ -12,7 +12,7 @@ var waitstaff = angular.module('waitstaff', ['ngRoute'])
 		})
 		.when('/earnings', {
 			templateUrl : 'earnings.html',
-			controller : 'EarningsCtrl'
+			controller : 'InputCtrl'
 		})
 		.otherwise('/');
 	})
