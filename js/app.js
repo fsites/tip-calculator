@@ -1,5 +1,6 @@
-var waitstaff = angular.module('waitstaff', ['ngRoute'])
+var waitstaff = angular.module('waitstaff', ['ngRoute', 'ngAnimate'])
 	
+//ROUTING CONFIG
 	.config(function($routeProvider) {
 		$routeProvider
 		.when('/', {
@@ -16,6 +17,23 @@ var waitstaff = angular.module('waitstaff', ['ngRoute'])
 		})
 		.otherwise('/');
 	})
+
+//SET BOOLEAN VALUE FOR ROUTE CHANGE ANIMATION
+	.run(function($rootScope, $location, $timeout) {
+		$rootScope.$on('$routeChangeError', function() {
+			$location.path('/');
+		});
+		$rootScope.$on('$routeChangeStart', function() {
+			$rootScope.isLoading = true;
+		});
+		$rootScope.$on('$routeChangeSuccess', function() {
+			$timeout(function() {
+				$rootScope.isLoading = false;
+			}, 1000);
+		});
+	}
+
+//SERVICE TO SHARE DATA
 	.factory('Total', function() {
 		var earnings = {
 			tipTotal: 0,
@@ -38,6 +56,8 @@ var waitstaff = angular.module('waitstaff', ['ngRoute'])
 			}
 		}
 	})
+
+//CONTROLLERS
 	.controller('HomeCtrl', ['$scope', function($scope) {
 		//empty
 	}])
