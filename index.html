@@ -6,11 +6,11 @@
 	<title>Tip Calculator</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
-	<!-- HEADER -->
+<body ng-class="{loading: isLoading}">
+<!-- HEADER -->
 	<h1>WaitStaff Calculator</h1>
 
-	<!-- NAV -->
+<!-- NAV -->
 	<ul id="nav">
 		<li><a href="#/">Home</a></li>
 		<li> | </li>
@@ -19,12 +19,12 @@
 		<li><a href="#/earnings">My Earnings</a></li>
 	</ul>
 
-	<div ng-view></div>
+	<div ng-view class='animate-view'></div>
 
 <!-- JS FILES -->
-	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="js/angular-route.min.js"></script>
-	<script type="text/javascript" src="js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
