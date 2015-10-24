@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-html {
-	font-family: "comic sans ms";
-=======
 body, html {
 	font-family: "comic sans ms";
 	position:relative; 
 	min-height:100%;
->>>>>>> master
 }
 
 h1 {
@@ -134,8 +129,6 @@ a:hover {
 	color: white;
 }
 
-<<<<<<< HEAD
-=======
 /*ANIMATIONS*/
 .animate-view-container { position:relative; min-height: 100%; }
 .animate-view.ng-enter,
@@ -154,7 +147,6 @@ a:hover {
 .animate-view.ng-leave.ng-leave-active { opacity:0; }
 
 /*Media Queries*/
->>>>>>> master
 @media (max-width: 700px) {
 
 	#main-content {
@@ -184,8 +176,5 @@ a:hover {
 }
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> master
