@@ -50,7 +50,13 @@ var waitstaff = angular.module('waitstaff', ['ngRoute'])
 			meal.tip = meal.subTotal * meal.tipPercent / 100;
 			meal.total = meal.subTotal + meal.tip;
 			Total.add(meal.tip);
-			$scope.clearForm();
+			$scope.formReset();
+		}
+
+		$scope.formReset = function() {
+			$scope.data.mealPrice = '';
+			$scope.data.taxPercent = 9.5;
+			$scope.data.tipPercent = 20;
 		}
 
 		$scope.initialState = function() {
@@ -66,9 +72,8 @@ var waitstaff = angular.module('waitstaff', ['ngRoute'])
 		}
 
 		$scope.clearForm = function() {
-			$scope.data.mealPrice = '';
-			$scope.data.taxPercent = 9.5;
-			$scope.data.tipPercent = 20;
+			$scope.data.taxPercent = '';
+			$scope.data.tipPercent = '';
 		}
 
 		$scope.initialState();
