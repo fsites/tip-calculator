@@ -16,7 +16,7 @@ h1 {
 .content-box {
 	border: 2px black solid;
 	border-radius: 3px;
-	margin: 10px 5px;
+	margin: 20px auto;
 }
 
 .button {
@@ -42,17 +42,46 @@ h3 {
 	margin: 3px;
 }
 
+a:link, a:visited, a:active {
+	color: #009ACD;
+	text-decoration: none;
+
+}
+
+a:hover {
+	border-bottom: 2px solid black;
+}
+
+
+/*HOME PAGE*/
+#nav {
+	list-style-type: none;
+	width: 100%;
+	margin: 0 auto 15px auto;
+	padding: 0;
+	text-align: center;
+}
+
+#nav li {
+	display: inline;
+	margin: 0 2px;
+}
+
+#directions {
+	width: 95%;
+	max-width: 550px;
+	margin: 20px auto;
+}
 
 /*Meal Details Box*/
 #details {
 	width: 380px;
 	height: 220px;
-	float: left;
 }
 
 #user-input {
-	width: 300px;
-	margin: 10px auto;
+	width: 330px;
+	margin: 20px auto;
 	text-align: center;
 }
 
@@ -75,12 +104,12 @@ h3 {
 #charges-earnings {
 	height: 300px;
 	width: 330px;
-	float: right;
+	margin: 0 auto;
 }
 #charges, #earnings {
 	width: 330px;
+	margin-top: 10px;
 	text-align: center;
-
 }
 
 #divider {
@@ -90,6 +119,7 @@ h3 {
 
 #reset {
 	float: right;
+	margin-top: 10px;
 }
 
 #reset:hover {
@@ -106,7 +136,7 @@ h3 {
 	#charges-earnings, #details {
 		float: none;
 		width: 320px;
-		margin: 0;
+		margin: 0 auto;
 	}
 
 	#charges, #earnings {
@@ -116,6 +146,11 @@ h3 {
 
 	h1 {
 		font-size: 1.4em;
+	}
+
+	p {
+		min-width: 320px;
+		margin: 10px;
 	}
 
 }

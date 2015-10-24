@@ -5,59 +5,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tip Calculator</title>
 	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript" src="angular.min.js"></script>
-	<script type="text/javascript" src="app.js"></script>
 </head>
-<body ng-controller="MyCtrl">
+<body>
 	<!-- HEADER -->
 	<h1>WaitStaff Calculator</h1>
 
-	<!-- Main Content -->
-	<div id="main-content">
+	<!-- NAV -->
+	<ul id="nav">
+		<li><a href="#/">Home</a></li>
+		<li> | </li>
+		<li><a href="#/input">New Meal</a></li>
+		<li> | </li>
+		<li><a href="#/earnings">My Earnings</a></li>
+	</ul>
 
-		<!-- Meal Details -->
-		<div class="content-box" id="details">
-			<h3>Enter the Meal Details</h3>
+	<div ng-view></div>
 
-			<form id="user-input" name="userform" ng-submit="onSubmit()">
-				<div><label for="mealPrice"></label>Base Meal Price: $<input type="number" name="mealPrice" id="meal-price" ng-model="mealPrice" required step=".01"/></div>
-				<div><label for="tax">Tax Rate: %</label><input type="number" name="tax" id="percent-box" ng-model="taxPercent" required step=".01"/></div>
-				<div><label for="tip">Tip Percentage: %</label><input type="number" name="tip" id="percent-box" ng-model="tipPercent" required/></div>
-
-				<div id="input-buttons">
-					<input class="button" type="submit" value="Submit" required/>
-					<input class="button" ng-click="clearform()" type="button" value="Clear">
-				</div>
-			</form>
-
-		</div>
-
-		<!-- Charges and Info Sections -->
-		<div id="charges-earnings">
-
-			<div class="content-box" id="charges">
-				<h3>Customer Charges</h3>
-				<div>
-					<div><label>Subtotal: $</label><span>{{subTotal | number: 2}}</span></div>
-					<div><label>Tip: $</label><span>{{tip | number: 2}}</span></div>
-					<div><label>Total: $</label><span>{{total | number: 2}}</span></div>
-				</div>
-			</div>
-
-			<div class="content-box" id="earnings">
-				<h3>My Earnings Info</h3>
-				<div>
-					<div><label>Tip Total: $</label><span>{{tipTotal | number: 2}}</span></div>
-					<div><label>Meal Count: </label><span>{{mealCount}}</span></div>
-					<div><label>Average Tip Per Meal: $</label><span>{{averageTip | number: 2}}</span></div>
-				</div>
-			</div>
-
-			<button id="reset" class="button" value"reset" ng-click="initialState()">Reset</button>
-
-		</div>
-
-	</div>
+<!-- JS FILES -->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
 
