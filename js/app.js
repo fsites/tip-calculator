@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 var waitstaff = angular.module('waitstaff', ['ngRoute'])
 	
+=======
+angular.module('waitstaff', ['ngRoute', 'ngAnimate'])
+	
+//ROUTING CONFIG
+>>>>>>> master
 	.config(function($routeProvider) {
 		$routeProvider
 		.when('/', {
@@ -16,6 +22,26 @@ var waitstaff = angular.module('waitstaff', ['ngRoute'])
 		})
 		.otherwise('/');
 	})
+<<<<<<< HEAD
+=======
+
+//SET BOOLEAN VALUE FOR ROUTE CHANGE ANIMATION
+    .run(function($rootScope, $location, $timeout) {
+        $rootScope.$on('$routeChangeError', function() {
+            $location.path("/");
+        });
+        $rootScope.$on('$routeChangeStart', function() {
+            $rootScope.isLoading = true;
+        });
+        $rootScope.$on('$routeChangeSuccess', function() {
+          $timeout(function() {
+            $rootScope.isLoading = false;
+          }, 1000);
+        });
+    })
+
+//SERVICE TO SHARE DATA
+>>>>>>> master
 	.factory('Total', function() {
 		var earnings = {
 			tipTotal: 0,
@@ -38,11 +64,19 @@ var waitstaff = angular.module('waitstaff', ['ngRoute'])
 			}
 		}
 	})
+<<<<<<< HEAD
+=======
+
+//CONTROLLERS
+>>>>>>> master
 	.controller('HomeCtrl', ['$scope', function($scope) {
 		//empty
 	}])
 	.controller('InputCtrl', ['$scope', 'Total', function($scope, Total) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 		$scope.onSubmit = function() {
 			var meal = $scope.data;
 			meal.tax = meal.taxPercent * meal.mealPrice / 100;
@@ -77,7 +111,10 @@ var waitstaff = angular.module('waitstaff', ['ngRoute'])
 		}
 
 		$scope.initialState();
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 	}])
 	.controller('EarningsCtrl', ['$scope', 'Total', function($scope, Total) {
 		$scope.data = Total.get();

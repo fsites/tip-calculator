@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 html {
 	font-family: "comic sans ms";
+=======
+body, html {
+	font-family: "comic sans ms";
+	position:relative; 
+	min-height:100%;
+>>>>>>> master
 }
 
 h1 {
@@ -127,6 +134,27 @@ a:hover {
 	color: white;
 }
 
+<<<<<<< HEAD
+=======
+/*ANIMATIONS*/
+.animate-view-container { position:relative; min-height: 100%; }
+.animate-view.ng-enter,
+.animate-view.ng-leave {
+    transition:.5s linear all;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#000;
+}
+.animate-view.ng-enter { opacity:0; z-index:100; }
+.animate-view.ng-enter.ng-enter-active { opacity:1; }
+.animate-view.ng-leave { opacity:1; z-index:99; }
+.animate-view.ng-leave.ng-leave-active { opacity:0; }
+
+/*Media Queries*/
+>>>>>>> master
 @media (max-width: 700px) {
 
 	#main-content {
@@ -156,3 +184,8 @@ a:hover {
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
