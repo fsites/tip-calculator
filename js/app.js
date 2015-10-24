@@ -30,7 +30,7 @@ var waitstaff = angular.module('waitstaff', ['ngRoute'])
 				earnings.tipTotal += tip;
 				earnings.mealCount++;
 				earnings.averageTip = earnings.tipTotal / earnings.mealCount
-			}
+			},
 			reset: function() {
 				earnings.tipTotal = 0;
 				earnings.mealCount = 0;
@@ -42,9 +42,30 @@ var waitstaff = angular.module('waitstaff', ['ngRoute'])
 		//empty
 	}])
 	.controller('InputCtrl', ['$scope', 'Total', function($scope, Total) {
-		initialState(); //resets on page load
 
-		$
+		$scope.onSubmit = function() {
+			var meal = $scope.data;
+			meal.tax = meal.taxPercent * meal.mealPrice / 100;
+			meal.subTotal = meal.mealPrice + meal.tax;
+			meal.tip = meal.subTotal * meal.tipPercent / 100;
+			meal.total = meal.subTotal + meal.tip;
+			Total.add(meal.tip);
+			$scope.initialState();
+		}
+
+		$scope.initialState = function() {
+			$scope.data = {
+				mealPrice: 0,
+				taxPercent: 9.5, //local tax rate
+				tipPercent: 20,
+				tax: 0,
+				subTotal: 0,
+				tip: 0,
+				total: 0
+			}
+		}
+
+		$scope.initialState();
 
 	}])
 	.controller('EarningsCtrl', ['$scope', 'Total', function($scope, Total) {
